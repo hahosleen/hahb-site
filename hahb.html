@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>#harrieandhisbastard</title>
+  <style>
+    :root {
+      --bg: #111111;
+      --card: #1b1b1b;
+      --accent: #d97706;
+      --accent-2: #f59e0b;
+      --text: #f5f5f5;
+      --muted: #cfcfcf;
+      --line: rgba(255,255,255,0.1);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(217,119,6,0.18), transparent 30%),
+        linear-gradient(180deg, #151515 0%, #0f0f0f 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid rgba(245,158,11,0.35);
+      border-radius: 999px;
+      color: var(--accent-2);
+      font-size: 14px;
+      margin-bottom: 18px;
+      background: rgba(245,158,11,0.08);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      max-width: 700px;
+      font-size: 20px;
+      color: var(--muted);
+      margin: 18px 0 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); opacity: .95; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #111;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+    }
+
+    main { padding: 40px 0 72px; }
+
+    section { margin-top: 28px; }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    p { margin: 0 0 12px; }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .recipe {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .recipe:first-child { border-top: 0; padding-top: 0; }
+
+    .pill {
+      font-size: 12px;
+      color: var(--accent-2);
+      border: 1px solid rgba(245,158,11,0.25);
+      border-radius: 999px;
+      padding: 5px 9px;
+      white-space: nowrap;
+      background: rgba(245,158,11,0.08);
+    }
+
+    .quote {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 24px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .flame {
+      color: var(--accent-2);
+      font-size: 20px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    @media (max-width: 700px) {
+      header { padding-top: 48px; }
+      .subtitle { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header style="position:relative; overflow:hidden; border-bottom:1px solid var(--line); background:linear-gradient(rgba(10,10,10,.45), rgba(10,10,10,.72)), url('img1.jpg') center/cover no-repeat;">
+    <div class="container" style="position:relative; z-index:2; padding:72px 0 56px;">
+      <div class="tag">🔥 BBQ • Smoke • Fire • Smaak zonder gedoe</div>
+      <h1>#harrieandhisbastard</h1>
+      <p class="subtitle">
+        Stoere BBQ, goed gezelschap en gerechten waar je spontaan stil van wordt.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#recepten">Bekijk recepten</a>
+        <a class="btn btn-secondary" href="#stixxx">Bekijk BBQ Stixxx</a>
+        <a class="btn btn-secondary" href="#contact">Contact / socials</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="container" style="margin-top:40px;">
+      <div class="card">
+        <h2><span class="flame">🔥</span>BBQ Momenten</h2>
+        <p class="small">Een paar indrukken van #harrieandhisbastard in actie.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px;">
+          <img src="img1.jpg" alt="BBQ workshop Harrie" style="width:100%;border-radius:14px;">
+          <img src="img2.jpg" alt="BBQ Stixxx" style="width:100%;border-radius:14px;">
+          <img src="img3.jpg" alt="BBQ pork" style="width:100%;border-radius:14px;">
+        </div>
+      </div>
+    </section>
+
+  <main>
+    <div class="container">
+      <section id="over" class="grid">
+        <article class="card">
+          <h2><span class="flame">🔥</span>Over</h2>
+          <p>
+            #harrieandhisbastard draait om toegankelijke BBQ met karakter: lekker eten, slimme shortcuts en gerechten die je meteen nóg een keer wilt maken.
+          </p>
+          <p>
+            Geen culinaire rookgordijnen, gewoon smaak. Een beetje pit, een beetje humor en vooral veel genieten rond de Bastard.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2><span class="flame">🍖</span>Stijl</h2>
+          <ul>
+            <li>BBQ zonder moeilijk gedoe</li>
+            <li>Van snelle bites tot low &amp; slow klassiekers</li>
+            <li>Perfect voor borrel, vrienden en vuur</li>
+            <li>Smaak eerst. Regels daarna.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="recepten" class="card">
+        <h2><span class="flame">🍗</span>Favoriete recepten</h2>
+
+        <div class="recipe">
+          <div>
+            <h3>Sweet &amp; Sticky Asian BBQ Wings</h3>
+            <p class="small">Kleverig, pittig, zoet en levensgevaarlijk lekker.</p>
+          </div>
+          <span class="pill">Publieksfavoriet</span>
+        </div>
+
+        <div class="recipe">
+          <div>
+            <h3>Dirty Chicken van de Bastard</h3>
+            <p class="small">Krokante buitenkant, sappig vanbinnen. Geen droge kip op Harrie-terrein.</p>
+          </div>
+          <span class="pill">Kamado classic</span>
+        </div>
+
+        <div class="recipe">
+          <div>
+            <h3>Pulled Pork Basics</h3>
+            <p class="small">Low &amp; slow comfort food voor broodjes, loaded fries of gewoon schaamteloos uit de bak.</p>
+          </div>
+          <span class="pill">Low &amp; slow</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article id="stixxx" class="card">
+          <h2><span class="flame">🔥</span>BBQ Stixxx</h2>
+          <p>
+            Van garnalen tot kip en beef: BBQ Stixxx zijn ideaal voor borrelplanken, feestjes en van die momenten waarop je eigenlijk gewoon meteen nog eentje wilt pakken.
+          </p>
+          <p class="small">
+            Simpel, stoer en perfect voor op de Bastard. Klein op een stokje, groot in smaak.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2><span class="flame">🧂</span>BBQ-wijsheid</h2>
+          <p class="quote">"Geduld is een ingrediënt. Net als boter. En bier helpt soms ook."</p>
+          <p class="small">— Vrij vertaald uit de keuken van Harrie</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2><span class="flame">🍢</span>Uitgelicht: BBQ Stixxx</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;align-items:start;">
+          <img src="img2.jpg" alt="BBQ Stixxx assortiment" style="width:100%;border-radius:14px;">
+          <div>
+            <p>
+              BBQ Stixxx zijn jouw snackbare smaakbommen van de Bastard: snel te serveren, makkelijk te delen en gevaarlijk effectief als je indruk wilt maken zonder culinaire toneelopleiding.
+            </p>
+            <ul>
+              <li>Garnalen Stixxx</li>
+              <li>Kip Stixxx</li>
+              <li>Beef Stixxx</li>
+              <li>Perfect voor borrel, workshop of feestje</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="instagram" class="card">
+        <h2><span class="flame">🔥</span>Instagram</h2>
+        <p class="small">SnapWidget trekt externe content binnen. Daarom blijft die om netwerktoegang zeuren als een hongerige labrador.</p>
+        <p>
+          Daarom heb ik het simpeler en stabieler gemaakt: geen externe feed meer, maar een nette Instagram-sectie met directe link naar je profiel.
+        </p>
+        <a class="btn btn-primary" href="https://www.instagram.com/harrieandhisbastard/" target="_blank" rel="noopener noreferrer">Bekijk @harrieandhisbastard op Instagram</a>
+      </section>
+
+      <section id="contact" class="card">
+        <h2><span class="flame">📬</span>Contact / socials</h2>
+        <p>
+          Zin in meer vuur, inspiratie of gewoon trek gekregen? Volg #harrieandhisbastard op Instagram.
+        </p>
+        <p class="small">
+          Instagram: <a href="https://www.instagram.com/harrieandhisbastard/" target="_blank" rel="noopener noreferrer" style="color:#f59e0b; text-decoration:none;">@harrieandhisbastard</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 #harrieandhisbastard — Klein qua webspace, groot in rookontwikkeling.
+    </div>
+  </footer>
+
+<script>
+const rubs = [
+  {
+    name: "Sweet Bastard Rub",
+    ingredients: [
+      "2 el bruine suiker",
+      "1 el gerookte paprika",
+      "1 tl knoflookpoeder",
+      "1 tl zwarte peper",
+      "½ tl cayenne"
+    ]
+  },
+  {
+    name: "Dirty Chicken Rub",
+    ingredients: [
+      "2 el paprika",
+      "1 el zout",
+      "1 tl uienpoeder",
+      "1 tl knoflookpoeder",
+      "½ tl chili flakes"
+    ]
+  },
+  {
+    name: "Low & Slow Pork Rub",
+    ingredients: [
+      "2 el bruine suiker",
+      "1 el paprika",
+      "1 tl mosterdpoeder",
+      "1 tl zwarte peper",
+      "½ tl komijn"
+    ]
+  },
+  {
+    name: "Beef Pitmaster Rub",
+    ingredients: [
+      "1 el grof zeezout",
+      "1 el zwarte peper",
+      "1 tl knoflookpoeder",
+      "1 tl uienpoeder",
+      "½ tl gerookte paprika"
+    ]
+  }
+];
+
+function generateRub() {
+  const rub = rubs[Math.floor(Math.random() * rubs.length)];
+
+  const title = document.getElementById("rub-name");
+  const list = document.getElementById("rub-ingredients");
+
+  title.textContent = rub.name;
+
+  list.innerHTML = "";
+  rub.ingredients.forEach(i => {
+    const li = document.createElement("li");
+    li.textContent = i;
+    list.appendChild(li);
+  });
+}
+
+
+const tips = [
+  "Laat vlees altijd 10-15 minuten rusten na het grillen. Sappen blijven dan beter in het vlees.",
+  "Gebruik een kernthermometer. Gokken is leuk in het casino, niet bij pulled pork.",
+  "Houtskool eerst goed laten doorbranden voordat je gaat grillen.",
+  "Een klein beetje rookhout is genoeg. Te veel rook maakt vlees bitter.",
+  "Smeer kip eventueel licht in met mayo voor een extra krokante buitenkant.",
+  "Direct vuur voor kleur, indirect vuur voor garen. Dat is de basis van kamado BBQ.",
+  "Laat de Bastard het werk doen. Geduld is vaak het belangrijkste ingrediënt."
+];
+
+function generateTip() {
+  const tip = tips[Math.floor(Math.random() * tips.length)];
+  const el = document.getElementById("bbq-tip");
+  el.textContent = tip;
+}
+
+</script>
+
+<section class="card" style="margin:40px auto; max-width:960px;">
+<h2>🔥 BBQ Tip van Harrie</h2>
+<p class="small">Soms heb je gewoon een kleine pitmaster-tip nodig.</p>
+
+<button onclick="generateTip()" class="btn btn-secondary" style="margin-bottom:20px">Geef me een BBQ tip</button>
+
+<p id="bbq-tip" class="quote">Klik op de knop en laat het vuur spreken.</p>
+</section>
+
+<section class="card" style="margin:40px auto; max-width:960px;">
+<h2>🧂 Random BBQ Rub Generator</h2>
+<p class="small">Klik en laat het vuur beslissen welke rub je vandaag gebruikt.</p>
+
+<button onclick="generateRub()" class="btn btn-primary" style="margin-bottom:20px">Genereer een rub</button>
+
+<h3 id="rub-name">Klik op de knop 🔥</h3>
+<ul id="rub-ingredients"></ul>
+</section>
+
+</body>
+</html>
